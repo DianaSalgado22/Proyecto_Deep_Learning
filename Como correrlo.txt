@@ -3,6 +3,7 @@
     make clean
     make
     Esto te genera un archivo first.gba
+- Si no les corre el make chequen esta conversación con chat de como hice yo que corriera https://chatgpt.com/share/682a2b6c-ad10-8011-8354-726d5cd30cad 
 - Abres la app de mGBA --> archivo --> Cargar ROM --> cargas el archivo first
 - Eso ya te abre la interfaz, para moverte es con las flechas y para escribir el numero con la x
 
