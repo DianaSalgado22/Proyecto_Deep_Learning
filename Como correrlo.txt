@@ -1,0 +1,28 @@
+- Te posicionas en la carpeta template_c (que tu terminal sea Bash)
+- tienes que poner los comandos: 
+    make clean
+    make
+    Esto te genera un archivo first.gba
+- Abres la app de mGBA --> archivo --> Cargar ROM --> cargas el archivo first
+- Eso ya te abre la interfaz, para moverte es con las flechas y para escribir el numero con la x
+
+Cambios y archivos que he hecho (DIANA)
+Dentro de la carpeta template_c/source:
+-  infer_from_int16.c --> es el archivo que hace que la red prediga y haga el feed forward en c
+- inference_motor.c --> ahi se definen funciones extras para la red (relu, dense)
+- En el main.c, linea 120 --> esta make_prediction que es el metodo que conecta todo con la interfaz grafica
+
+El entrenamiento de la red esta en el notebook fuera de la carpeta
+- Ahi se entrena en pytorch y se cuantizan los pesos solo redondeando 
+- y se descarga model_weights.h --> este documento hay que pasarlo a source ( esto posteriormente quiza  hay que meterlo a la carpeta ya que sea la version final)
+(Una disculpa por la documentacion y la organizacion fue solo un borrador para probar)
+
+
+Estado Actual:
+La conexión de los elementos funciona bien y todo corre pero la prediccion es muy mala
+probablemente se deba a que la cuantizacion de los pesos que hice esta bien pedorra
+
+Notas extras:
+- Carlos dijo que pytorch ya tiene librerias para cuantizar entonces podriamso checar Eso
+- Pero primero hay que checar que la red este funcionando bien desde antes de cuantizar y despues
+- en pytorch para ver si el problema es de eso o es al pasarlo a c

@@ -1,0 +1,10 @@
+# Build outputs
+*.elf
+*.gba
+*.map
+*.sav
+
+# Folders
+build/
+gbafix/gbafix
+.vscode/
